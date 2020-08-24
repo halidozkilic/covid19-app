@@ -1,0 +1,38 @@
+<div class="col-md-4 offset-md-4">
+
+
+
+
+
+<div  class="row" *ngFor="let user of users">
+    <!-- <div class="col-sm-12" style="text-align:center;">
+      Register
+    </div> -->
+  
+    <div class="col-sm-12">
+        <div class="jumbotron">
+            <h1 class="display-4">THE {{user.username}}!</h1>
+            <hr class="my-4">
+            
+            <div>
+                <img src= {{user.imageUrl}}> <br>
+               
+                Status: {{user.status}}
+            </div>
+            <p class="lead" style="color:white;">
+              <a class="btn btn-danger btn-sm" role="button" (click)="delete(user._id)">delete user</a>
+            </p>
+            <br>
+            <br>
+            <br>
+           
+            
+          </div>
+
+          
+
+    </div>
+    
+  </div>
+
+</div>

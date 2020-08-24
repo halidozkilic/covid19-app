@@ -1,0 +1,71 @@
+<div class="grid-container">
+  
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        
+       <div class="cal1">
+        <div class="card bg-c-blue order-card cal1">
+          <div class="card-block">
+              <h6 class="m-b-20">Infected</h6>
+              <h2 class="text-right"><i class="fa fa-globe  f-left"></i><span>{{total}}</span></h2>
+              
+          </div>
+      </div>
+
+
+       </div>
+         
+        
+        
+        
+            <div class="cal2">    
+<div class="card bg-c-green order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20">Infected Yesterday</h6>
+                    <h2 class="text-right"><i class="fa fa-plus f-left"></i><span>{{prevDayCase}}</span></h2>
+                   
+                </div>
+            </div>
+
+
+            </div>
+            
+        
+        
+        
+        <div class="cal3">
+ <div class="card bg-c-pink order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20">Infected Today</h6>
+                    <h2 class="text-right"><i class="fa fa-bug f-left"></i><span>{{dailyCase}}</span></h2>
+                    
+                </div>
+            </div>
+
+        </div>
+        
+           
+   
+  
+  <div class="takvim">
+  <app-calendar 
+          [yesterday]="yesterday"
+          (onYesterday)="yesterdayUpdate($event)"
+          [data]="data"
+          (onData)="updateData($event)"
+        ></app-calendar>
+  </div>
+
+   <app-map class="map" [data]="data" (onData)="updateDate($event)"></app-map>
+  
+</div>
+  
+ 
+
+   
+  
+
+        
+
+
+         

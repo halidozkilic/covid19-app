@@ -1,0 +1,42 @@
+
+<div class="row">
+  
+
+<div class="col-xs-4 col-md-5">
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker
+      (markerClick)="deniyorum(data._id)"
+      *ngFor="let data of data"
+      [latitude]="data.lat"
+      [longitude]="data.lon"
+    >
+    </agm-marker>
+  </agm-map>
+
+  <!-- this creates a google map on the page with the given lat/lng from -->
+  <!-- the component as the initial center of the map: -->
+
+  
+</div>
+
+<div class="col-xs-8 col-md-4">
+
+  <div class="cal1" >
+    <div class="card bg-c-yellow order-card cal1">
+
+      <div class="card-block" *ngFor="let data of data2">
+        <h2 class="text-right"><i class="fa fa-id-card  f-left"></i><span>{{total}}</span></h2>
+        <br> 
+        <h6 class="m-b-20">adı:{{data.name}}</h6>
+          <h6 class="m-b-20">soyadı:{{data.surname}}</h6>
+          <h6 class="m-b-20">tc:{{data.tc}}</h6>
+          <h6 class="m-b-20">telno:{{data.phone}}</h6>
+          
+         
+          
+      </div>
+  </div>
+  
+</div>
+</div>
+
